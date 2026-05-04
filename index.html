@@ -9,33 +9,39 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-logo">abdullahkhan<span style="color:var(--muted);">.dev</span></div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certs</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- HEADER / TABS -->
+  <header class="page-header">
+    <div class="header-container">
+      <nav class="tab-nav">
+        <ul class="nav-links">
+          <li><a href="#welcome" class="tab-link active" data-tab="welcome">Welcome</a></li>
+          <li><a href="#about" class="tab-link" data-tab="about">About</a></li>
+          <li><a href="#projects" class="tab-link" data-tab="projects">Projects</a></li>
+          <li><a href="#skills" class="tab-link" data-tab="skills">Skills</a></li>
+          <li><a href="#certifications" class="tab-link" data-tab="certifications">Certs</a></li>
+          <li><a href="#education" class="tab-link" data-tab="education">Education</a></li>
+          <li><a href="#leadership" class="tab-link" data-tab="leadership">Leadership</a></li>
+          <li><a href="#awards" class="tab-link" data-tab="awards">Awards</a></li>
+          <li><a href="#contact" class="tab-link" data-tab="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <!-- HERO -->
-  <section id="hero" style="max-width:100%; padding-top:8rem;">
+  <!-- MAIN CONTENT -->
+  <main class="tab-content-container">
+  <!-- WELCOME (Hero) -->
+  <section id="welcome" class="tab-pane active" style="max-width:100%; padding-top:4rem;">
     <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-glow2"></div>
-    <div class="hero-content">
+    <div class="hero-content" style="max-width:800px; margin:0 auto; text-align:center;">
       <div class="hero-tag">Available for Opportunities</div>
-      <h1 class="hero-name">Abdullah<br/><span>Khan</span></h1>
-      <p class="hero-desc">
+      <h2 class="section-title">Welcome to my <span>Portfolio!</span></h2>
+      <p class="hero-desc" style="margin: 0 auto 2.5rem;">
         AI & Machine Learning Engineer passionate about Computer Vision, NLP, and Edge AI. 
         Microsoft Learn Student Ambassador — Gold. Building things that matter.
       </p>
-      <div class="hero-links">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
+      <div class="hero-links" style="justify-content:center;">
+        <button class="btn btn-primary" onclick="document.querySelector('[data-tab=\'projects\']').click()">View Projects</button>
         <a href="YOUR_CV_LINK" class="btn btn-ghost">Download CV</a>
         <a href="https://github.com/abdullahkhan-cs" class="btn btn-ghost">GitHub ↗</a>
       </div>
@@ -43,7 +49,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="tab-pane">
     <div class="section-label">// 01 — About</div>
     <h2 class="section-title">Who I <span>Am</span></h2>
     <div class="about-grid fade-in">
@@ -82,10 +88,8 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- PROJECTS -->
-  <section id="projects">
+  <section id="projects" class="tab-pane">
     <div class="section-label">// 02 — Work</div>
     <h2 class="section-title">Notable <span>Projects</span></h2>
     <div class="projects-grid">
@@ -178,10 +182,8 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- SKILLS -->
-  <section id="skills">
+  <section id="skills" class="tab-pane">
     <div class="section-label">// 03 — Toolkit</div>
     <h2 class="section-title">Skills &amp; <span>Tools</span></h2>
     <div class="skills-grid fade-in">
@@ -251,10 +253,8 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- CERTIFICATIONS -->
-  <section id="certifications">
+  <section id="certifications" class="tab-pane">
     <div class="section-label">// 04 — Learning</div>
     <h2 class="section-title">Certifications &amp; <span>Courses</span></h2>
     <div class="cert-list fade-in">
@@ -358,10 +358,8 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- EDUCATION -->
-  <section id="education">
+  <section id="education" class="tab-pane">
     <div class="section-label">// 05 — Background</div>
     <h2 class="section-title"><span>Education</span></h2>
     <div class="edu-list fade-in">
@@ -379,10 +377,8 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- LEADERSHIP -->
-  <section id="leadership">
+  <section id="leadership" class="tab-pane">
     <div class="section-label">// 06 — Community</div>
     <h2 class="section-title">Leadership &amp; <span>Activities</span></h2>
     <div class="fade-in">
@@ -407,10 +403,8 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- AWARDS -->
-  <section id="awards">
+  <section id="awards" class="tab-pane">
     <div class="section-label">// 07 — Recognition</div>
     <h2 class="section-title">Awards &amp; <span>Grants</span></h2>
     <div class="awards-list fade-in">
@@ -430,7 +424,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" class="tab-pane">
     <div class="contact-inner">
       <div class="section-label" style="text-align:center;">// 08 — Let's Talk</div>
       <h2 class="section-title" style="text-align:center;">Get In <span>Touch</span></h2>
@@ -446,6 +440,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
