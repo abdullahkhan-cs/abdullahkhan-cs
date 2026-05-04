@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdullah Khan — AI & ML Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;1,400;1,600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- HEADER / TABS -->
@@ -30,416 +34,552 @@
 
   <!-- MAIN CONTENT -->
   <main class="tab-content-container">
-  <!-- WELCOME (Hero) -->
-  <section id="welcome" class="tab-pane active" style="max-width:100%; padding-top:4rem;">
-    <div class="hero-grid"></div>
-    <div class="hero-content" style="max-width:800px; margin:0 auto; text-align:center;">
-      <div class="hero-tag">Available for Opportunities</div>
-      <h2 class="section-title">Welcome to my <span>Portfolio!</span></h2>
-      <p class="hero-desc" style="margin: 0 auto 2.5rem;">
-        AI & Machine Learning Engineer passionate about Computer Vision, NLP, and Edge AI. 
-        Microsoft Learn Student Ambassador — Gold. Building things that matter.
-      </p>
-      <div class="hero-links" style="justify-content:center;">
-        <button class="btn btn-primary" onclick="document.querySelector('[data-tab=\'projects\']').click()">View Projects</button>
-        <a href="YOUR_CV_LINK" class="btn btn-ghost">Download CV</a>
-        <a href="https://github.com/abdullahkhan-cs" class="btn btn-ghost">GitHub ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="tab-pane">
-    <div class="section-label">// 01 — About</div>
-    <h2 class="section-title">Who I <span>Am</span></h2>
-    <div class="about-grid fade-in">
-      <div class="about-text">
-        <p>
-          I'm a final-year BS Computer Science student at Quaid-e-Awam University, specialising in Artificial Intelligence 
-          and Machine Learning. My work spans Computer Vision, NLP, Federated Learning, and Edge AI deployment.
+    <!-- WELCOME (Hero) -->
+    <section id="welcome" class="tab-pane active" style="max-width:100%; padding-top:4rem;">
+      <div class="hero-grid"></div>
+      <div class="hero-content" style="max-width:800px; margin:0 auto; text-align:center;">
+        <div class="hero-tag">Available for Opportunities</div>
+        <h2 class="section-title">Welcome to my <span>Portfolio!</span></h2>
+        <p class="hero-desc" style="margin: 0 auto 2.5rem;">
+          Hi! I am Abdullah, passionate about Computer Vision, NLP, and Edge AI.
+          Microsoft Learn Student Ambassador — Gold. Building things that matter.
         </p>
-        <p>
-          As a Microsoft Student Ambassador at Gold status, I mentor students, run AI workshops, 
-          and build projects that bridge the gap between research and real-world impact.
-        </p>
-        <p>
-          I believe great ML isn't just about model accuracy — it's about building systems that are 
-          interpretable, deployable, and genuinely useful.
-        </p>
-      </div>
-      <div class="about-stats">
-        <div class="stat-card">
-          <div class="stat-num">4</div>
-          <div class="stat-label">Projects Built</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">8</div>
-          <div class="stat-label">Certifications</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">Gold</div>
-          <div class="stat-label">MLSA Status</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">$150</div>
-          <div class="stat-label">Azure Credits/mo</div>
+        <div class="hero-links" style="justify-content:center;">
+          <button class="btn btn-primary" onclick="document.querySelector('[data-tab=\'projects\']').click()">View
+            Projects</button>
+          <a href="YOUR_CV_LINK" class="btn btn-ghost">Download CV</a>
+          <a href="https://github.com/abdullahkhan-cs" class="btn btn-ghost">GitHub ↗</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="tab-pane">
-    <div class="section-label">// 02 — Work</div>
-    <h2 class="section-title">Notable <span>Projects</span></h2>
-    <div class="projects-grid">
-
-      <div class="project-card fade-in">
-        <div class="project-tag">Computer Vision · Edge AI</div>
-        <div class="project-name">PlantGuardNet</div>
-        <div class="project-subtitle">Edge AI for Crop Disease Detection</div>
-        <p class="project-desc">
-          MobileNetV3-based CNN with custom CBAM attention for 38-class plant disease detection. 
-          94.3% accuracy at 12ms on Raspberry Pi 4. Deployed as Flutter app used by 3 NGOs in Punjab.
-        </p>
-        <div class="project-stack">
-          <span class="tag">Python</span>
-          <span class="tag">TensorFlow</span>
-          <span class="tag">TFLite</span>
-          <span class="tag">OpenCV</span>
-          <span class="tag">Flutter</span>
-          <span class="tag">Raspberry Pi</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/abdullahkhan-cs/PlantGuardNet" class="project-link">GitHub</a>
-          <a href="#" class="project-link">Demo</a>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-tag">NLP · Transformers</div>
-        <div class="project-name">UrduSenti-BERT</div>
-        <div class="project-subtitle">Code-Switched Sentiment Analysis</div>
-        <p class="project-desc">
-          Fine-tuned mBERT on 18k Urdu-English tweets achieving 88.4% F1. Published on HuggingFace 
-          with 2,300+ downloads. FastAPI backend integrated into NUST lab's monitoring dashboard.
-        </p>
-        <div class="project-stack">
-          <span class="tag">Python</span>
-          <span class="tag">Hugging Face</span>
-          <span class="tag">mBERT</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">NLP</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/abdullahkhan-cs/UrduSenti-BERT" class="project-link">GitHub</a>
-          <a href="#" class="project-link">HuggingFace</a>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-tag">Federated Learning · Medical AI</div>
-        <div class="project-name">FedMed</div>
-        <div class="project-subtitle">Federated Learning for Chest X-Ray Diagnosis</div>
-        <p class="project-desc">
-          3-node federated learning system for chest pathology classification. 91.7% AUC on NIH 
-          ChestX-ray14. FedAvg + FedProx aggregation. Dissertation graded A+, nominated for best-project award.
-        </p>
-        <div class="project-stack">
-          <span class="tag">Python</span>
-          <span class="tag">PyTorch</span>
-          <span class="tag">Flower</span>
-          <span class="tag">FedAvg</span>
-          <span class="tag">FedProx</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/abdullahkhan-cs/FedMed" class="project-link">GitHub</a>
-          <a href="#" class="project-link">Report</a>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-tag">Computer Vision · XAI</div>
-        <div class="project-name">DeepFake Detector</div>
-        <div class="project-subtitle">Video Manipulation Detection</div>
-        <p class="project-desc">
-          EfficientNet-B4 + LSTM pipeline on FaceForensics++ achieving 96.1% binary classification accuracy. 
-          Grad-CAM visualisations for interpretability. Awarded highest marks in cohort.
-        </p>
-        <div class="project-stack">
-          <span class="tag">Python</span>
-          <span class="tag">PyTorch</span>
-          <span class="tag">EfficientNet</span>
-          <span class="tag">LSTM</span>
-          <span class="tag">Grad-CAM</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/abdullahkhan-cs/DeepFake-Detector" class="project-link">GitHub</a>
-          <a href="#" class="project-link">Slides</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="tab-pane">
-    <div class="section-label">// 03 — Toolkit</div>
-    <h2 class="section-title">Skills &amp; <span>Tools</span></h2>
-    <div class="skills-grid fade-in">
-
-      <div class="skill-group">
-        <div class="skill-group-title">Programming</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Dart / Flutter</span>
-          <span class="skill-tag">C / C++</span>
-          <span class="skill-tag">Java</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-title">DL Frameworks</div>
-        <div class="skill-tags">
-          <span class="skill-tag">PyTorch</span>
-          <span class="skill-tag">TensorFlow</span>
-          <span class="skill-tag">TFLite</span>
-          <span class="skill-tag">Keras</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-title">NLP & Transformers</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Hugging Face</span>
-          <span class="skill-tag">mBERT</span>
-          <span class="skill-tag">Fine-tuning</span>
-          <span class="skill-tag">Model Cards</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-title">Computer Vision</div>
-        <div class="skill-tags">
-          <span class="skill-tag">OpenCV</span>
-          <span class="skill-tag">EfficientNet</span>
-          <span class="skill-tag">MobileNetV3</span>
-          <span class="skill-tag">Grad-CAM</span>
-          <span class="skill-tag">CBAM</span>
-          <span class="skill-tag">LSTM</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-title">Federated Learning</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Flower</span>
-          <span class="skill-tag">FedAvg</span>
-          <span class="skill-tag">FedProx</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-title">Deployment & MLOps</div>
-        <div class="skill-tags">
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">Azure AI</span>
-          <span class="skill-tag">Raspberry Pi</span>
-          <span class="skill-tag">HuggingFace Hub</span>
-          <span class="skill-tag">REST APIs</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="tab-pane">
-    <div class="section-label">// 04 — Learning</div>
-    <h2 class="section-title">Certifications &amp; <span>Courses</span></h2>
-    <div class="cert-list fade-in">
-
-      <div class="cert-card">
-        <div class="cert-num">[1]</div>
-        <div class="cert-info">
-          <div class="cert-name">Deep Learning Specialization <span style="color:var(--muted);font-weight:400;font-size:0.85rem;">— 5 Courses</span></div>
-          <div class="cert-issuer">DeepLearning.AI / Coursera</div>
-        </div>
-        <div class="cert-meta">
-          <div class="cert-grade">97.4% avg</div>
-          <div class="cert-year">2026</div>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-num">[2]</div>
-        <div class="cert-info">
-          <div class="cert-name">Machine Learning Specialization <span style="color:var(--muted);font-weight:400;font-size:0.85rem;">— 3 Courses</span></div>
-          <div class="cert-issuer">DeepLearning.AI / Coursera</div>
-        </div>
-        <div class="cert-meta">
-          <div class="cert-grade">98.1% avg</div>
-          <div class="cert-year">2026</div>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-num">[3]</div>
-        <div class="cert-info">
-          <div class="cert-name">CS231n: CNNs for Visual Recognition</div>
-          <div class="cert-issuer">Stanford Online</div>
-        </div>
-        <div class="cert-meta">
-          <div class="cert-grade">Distinction</div>
-          <div class="cert-year">2025</div>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-num">[4]</div>
-        <div class="cert-info">
-          <div class="cert-name">CS224N: NLP with Deep Learning</div>
-          <div class="cert-issuer">Stanford Online</div>
-        </div>
-        <div class="cert-meta">
-          <div class="cert-grade">Distinction</div>
-          <div class="cert-year">2025</div>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-num">[5]</div>
-        <div class="cert-info">
-          <div class="cert-name">TensorFlow Developer Certificate</div>
-          <div class="cert-issuer">Google</div>
-        </div>
-        <div class="cert-meta">
-          <div class="cert-grade">Pass</div>
-          <div class="cert-year">2024</div>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-num">[6]</div>
-        <div class="cert-info">
-          <div class="cert-name">Practical Deep Learning for Coders (v5)</div>
-          <div class="cert-issuer">fast.ai</div>
-        </div>
-        <div class="cert-meta">
-          <div class="cert-grade">Completed</div>
-          <div class="cert-year">2024</div>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-num">[7]</div>
-        <div class="cert-info">
-          <div class="cert-name">Mathematics for Machine Learning <span style="color:var(--muted);font-weight:400;font-size:0.85rem;">— 3 Courses</span></div>
-          <div class="cert-issuer">Imperial College / Coursera</div>
-        </div>
-        <div class="cert-meta">
-          <div class="cert-grade">95.8% avg</div>
-          <div class="cert-year">2024</div>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-num">[8]</div>
-        <div class="cert-info">
-          <div class="cert-name">Python for Data Science &amp; AI</div>
-          <div class="cert-issuer">IBM / Coursera</div>
-        </div>
-        <div class="cert-meta">
-          <div class="cert-grade">96%</div>
-          <div class="cert-year">2024</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education" class="tab-pane">
-    <div class="section-label">// 05 — Background</div>
-    <h2 class="section-title"><span>Education</span></h2>
-    <div class="edu-list fade-in">
-
-      <div class="edu-card">
-        <div>
-          <div class="edu-degree">BS Computer Science — Quaid-e-Awam University</div>
-          <div class="edu-school">Nawabshah, Pakistan</div>
-          <div class="edu-detail">BS Thesis - FedMed: Federated Learning for Chest X-Ray Diagnosis
-, CGPA: 3.4/4.0, Honours, ongoing</div>
-        </div>
-        <div class="edu-date">2023 — 2027</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- LEADERSHIP -->
-  <section id="leadership" class="tab-pane">
-    <div class="section-label">// 06 — Community</div>
-    <h2 class="section-title">Leadership &amp; <span>Activities</span></h2>
-    <div class="fade-in">
-      <div class="lead-card">
-        <div class="lead-icon">🏆</div>
-        <div>
-          <div class="lead-title">Microsoft Learn Student Ambassador</div>
-          <div class="lead-org">Microsoft, USA — Gold Status · 2024 – 2026</div>
-          <p class="lead-desc">
-            Achieved Gold status among Microsoft Learn Student Ambassadors. Delivered AI and cloud-focused 
-            learning sessions covering Azure AI, machine learning fundamentals, and responsible AI. 
-            Mentored students on real-world AI projects from ideation through deployment using Microsoft platforms.
+    <!-- ABOUT -->
+    <section id="about" class="tab-pane">
+      <div class="section-label">// 01 — About</div>
+      <h2 class="section-title">Who I <span>Am</span></h2>
+      <div class="about-grid fade-in">
+        <div class="about-text">
+          <p>
+            I'm a final-year BS Computer Science student at Quaid-e-Awam University, specialising in Artificial
+            Intelligence
+            and Machine Learning. My work spans Computer Vision, NLP, Federated Learning, and Edge AI deployment.
           </p>
-          <div class="lead-perks">
-            <span class="perk">Azure $150/mo Credits</span>
-            <span class="perk">Visual Studio Enterprise</span>
-            <span class="perk">Microsoft 365</span>
-            <span class="perk">Gold Status</span>
+          <p>
+            As a Microsoft Student Ambassador at Gold status, I mentor students, run AI workshops,
+            and build projects that bridge the gap between research and real-world impact.
+          </p>
+          <p>
+            I believe great ML isn't just about model accuracy — it's about building systems that are
+            interpretable, deployable, and genuinely useful.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">8</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">Gold</div>
+            <div class="stat-label">MLSA Status</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">$150</div>
+            <div class="stat-label">Azure Credits/mo</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- AWARDS -->
-  <section id="awards" class="tab-pane">
-    <div class="section-label">// 07 — Recognition</div>
-    <h2 class="section-title">Awards &amp; <span>Grants</span></h2>
-    <div class="awards-list fade-in">
-      <div class="award-item">
-        <div class="award-dot"></div>
-        <div class="award-text"><strong>Azure Cloud Credits</strong> — $150/month from Microsoft for AI and cloud project development via MLSA Gold</div>
-      </div>
-      <div class="award-item">
-        <div class="award-dot"></div>
-        <div class="award-text"><strong>Visual Studio Enterprise</strong> — Full professional development license awarded through Microsoft MLSA program</div>
-      </div>
-      <div class="award-item">
-        <div class="award-dot"></div>
-        <div class="award-text"><strong>Microsoft 365 License</strong> — Complete suite access including advanced productivity and collaboration tools</div>
-      </div>
-    </div>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="tab-pane">
+      <div class="section-label">// 02 — Work</div>
+      <h2 class="section-title">Notable <span>Projects</span></h2>
+      <div class="projects-grid">
 
-  <!-- CONTACT -->
-  <section id="contact" class="tab-pane">
-    <div class="contact-inner">
-      <div class="section-label" style="text-align:center;">// 08 — Let's Talk</div>
-      <h2 class="section-title" style="text-align:center;">Get In <span>Touch</span></h2>
-      <p style="color:var(--muted);font-style:italic;margin-bottom:1rem;">
-        Open to research collaborations, internships, and interesting projects.
-      </p>
-      <a href="mailto:abdullah.malokhani@email.com" class="contact-email">abdullah.malokhani@email.com</a>
-      <div class="social-links">
-        <a href="https://github.com/abdullahkhan-cs" class="btn btn-ghost">GitHub</a>
-        <a href="https://linkedin.com/in/abdullah-malokani" class="btn btn-ghost">LinkedIn</a>
-        <a href="https://huggingface.co/yourusername" class="btn btn-ghost">HuggingFace</a>
-        <a href="YOUR_CV_LINK" class="btn btn-primary">Download CV</a>
+        <div class="project-card fade-in">
+          <div class="project-tag">Computer Vision · Edge AI</div>
+          <div class="project-name">PlantGuardNet</div>
+          <div class="project-subtitle">Edge AI for Crop Disease Detection</div>
+          <p class="project-desc">
+            MobileNetV3-based CNN with custom CBAM attention for 38-class plant disease detection.
+            94.3% accuracy at 12ms on Raspberry Pi 4. Deployed as Flutter app used by 3 NGOs in Punjab.
+          </p>
+          <div class="project-stack">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">TFLite</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">Raspberry Pi</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/abdullahkhan-cs/PlantGuardNet" class="project-link">GitHub</a>
+            <a href="#" class="project-link">Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-tag">NLP · Transformers</div>
+          <div class="project-name">UrduSenti-BERT</div>
+          <div class="project-subtitle">Code-Switched Sentiment Analysis</div>
+          <p class="project-desc">
+            Fine-tuned mBERT on 18k Urdu-English tweets achieving 88.4% F1. Published on HuggingFace
+            with 2,300+ downloads. FastAPI backend integrated into NUST lab's monitoring dashboard.
+          </p>
+          <div class="project-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Hugging Face</span>
+            <span class="tag">mBERT</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">NLP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/abdullahkhan-cs/UrduSenti-BERT" class="project-link">GitHub</a>
+            <a href="#" class="project-link">HuggingFace</a>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-tag">Federated Learning · Medical AI</div>
+          <div class="project-name">FedMed</div>
+          <div class="project-subtitle">Federated Learning for Chest X-Ray Diagnosis</div>
+          <p class="project-desc">
+            3-node federated learning system for chest pathology classification. 91.7% AUC on NIH
+            ChestX-ray14. FedAvg + FedProx aggregation. Dissertation graded A+, nominated for best-project award.
+          </p>
+          <div class="project-stack">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Flower</span>
+            <span class="tag">FedAvg</span>
+            <span class="tag">FedProx</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/abdullahkhan-cs/FedMed" class="project-link">GitHub</a>
+            <a href="#" class="project-link">Report</a>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-tag">Computer Vision · XAI</div>
+          <div class="project-name">DeepFake Detector</div>
+          <div class="project-subtitle">Video Manipulation Detection</div>
+          <p class="project-desc">
+            EfficientNet-B4 + LSTM pipeline on FaceForensics++ achieving 96.1% binary classification accuracy.
+            Grad-CAM visualisations for interpretability. Awarded highest marks in cohort.
+          </p>
+          <div class="project-stack">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">EfficientNet</span>
+            <span class="tag">LSTM</span>
+            <span class="tag">Grad-CAM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/abdullahkhan-cs/DeepFake-Detector" class="project-link">GitHub</a>
+            <a href="#" class="project-link">Slides</a>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="tab-pane">
+      <div class="section-label">// 03 — Toolkit</div>
+      <h2 class="section-title">Skills &amp; <span>Tools</span></h2>
+      <div class="skills-grid fade-in">
+
+        <div class="skill-group">
+          <div class="skill-group-title">Programming</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Dart / Flutter</span>
+            <span class="skill-tag">C / C++</span>
+            <span class="skill-tag">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">DL Frameworks</div>
+          <div class="skill-tags">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">TFLite</span>
+            <span class="skill-tag">Keras</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">NLP & Transformers</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Hugging Face</span>
+            <span class="skill-tag">mBERT</span>
+            <span class="skill-tag">Fine-tuning</span>
+            <span class="skill-tag">Model Cards</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Computer Vision</div>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">EfficientNet</span>
+            <span class="skill-tag">MobileNetV3</span>
+            <span class="skill-tag">Grad-CAM</span>
+            <span class="skill-tag">CBAM</span>
+            <span class="skill-tag">LSTM</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Federated Learning</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Flower</span>
+            <span class="skill-tag">FedAvg</span>
+            <span class="skill-tag">FedProx</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Deployment & MLOps</div>
+          <div class="skill-tags">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Azure AI</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">HuggingFace Hub</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="tab-pane">
+      <div class="section-label">// 04 — Learning</div>
+      <h2 class="section-title">Certifications &amp; <span>Courses</span></h2>
+      <div class="cert-list fade-in">
+
+        <div class="cert-card">
+          <div class="cert-num">[1]</div>
+          <div class="cert-info">
+            <div class="cert-name">Deep Learning Specialization <span
+                style="color:var(--muted);font-weight:400;font-size:0.85rem;">— 5 Courses</span></div>
+            <div class="cert-issuer">DeepLearning.AI / Coursera</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-grade">97.4% avg</div>
+            <div class="cert-year">2026</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-num">[2]</div>
+          <div class="cert-info">
+            <div class="cert-name">Machine Learning Specialization <span
+                style="color:var(--muted);font-weight:400;font-size:0.85rem;">— 3 Courses</span></div>
+            <div class="cert-issuer">DeepLearning.AI / Coursera</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-grade">98.1% avg</div>
+            <div class="cert-year">2026</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-num">[3]</div>
+          <div class="cert-info">
+            <div class="cert-name">CS231n: CNNs for Visual Recognition</div>
+            <div class="cert-issuer">Stanford Online</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-grade">Distinction</div>
+            <div class="cert-year">2025</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-num">[4]</div>
+          <div class="cert-info">
+            <div class="cert-name">CS224N: NLP with Deep Learning</div>
+            <div class="cert-issuer">Stanford Online</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-grade">Distinction</div>
+            <div class="cert-year">2025</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-num">[5]</div>
+          <div class="cert-info">
+            <div class="cert-name">TensorFlow Developer Certificate</div>
+            <div class="cert-issuer">Google</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-grade">Pass</div>
+            <div class="cert-year">2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-num">[6]</div>
+          <div class="cert-info">
+            <div class="cert-name">Practical Deep Learning for Coders (v5)</div>
+            <div class="cert-issuer">fast.ai</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-grade">Completed</div>
+            <div class="cert-year">2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-num">[7]</div>
+          <div class="cert-info">
+            <div class="cert-name">Mathematics for Machine Learning <span
+                style="color:var(--muted);font-weight:400;font-size:0.85rem;">— 3 Courses</span></div>
+            <div class="cert-issuer">Imperial College / Coursera</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-grade">95.8% avg</div>
+            <div class="cert-year">2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-num">[8]</div>
+          <div class="cert-info">
+            <div class="cert-name">Python for Data Science &amp; AI</div>
+            <div class="cert-issuer">IBM / Coursera</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-grade">96%</div>
+            <div class="cert-year">2024</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="tab-pane">
+      <div class="section-label">// 05 — Background</div>
+      <h2 class="section-title"><span>Education</span></h2>
+      <div class="edu-list fade-in">
+
+        <div class="edu-card">
+          <div>
+            <div class="edu-degree">BS Computer Science — Quaid-e-Awam University</div>
+            <div class="edu-school">Nawabshah, Pakistan</div>
+            <div class="edu-detail">BS Thesis - FedMed: Federated Learning for Chest X-Ray Diagnosis
+              , CGPA: 3.4/4.0, Honours, ongoing</div>
+          </div>
+          <div class="edu-date">2023 — 2027</div>
+        </div>
+
+      </div>
+
+      <h3 class="section-title" style="margin-top: 4rem; font-size: 2rem; color: var(--accent2); margin-bottom: 2rem;">Coursework / <span>Scheme of Studies</span></h3>
+
+      <div class="coursework-section fade-in">
+        <h4 class="year-title">1st Year</h4>
+        <div class="coursework-grid">
+          <div>
+            <h5 class="semester-title">1st Semester</h5>
+            <table class="coursework-table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr. Hr</th></tr></thead>
+              <tbody>
+                <tr><td>NA</td><td>Pre-Calculus-I*</td><td>0 + 0</td></tr>
+                <tr><td>MS124</td><td>Pre-Calculus-II*</td><td>0 + 0</td></tr>
+                <tr><td>404</td><td>Computer Fundamentals</td><td>2 + 1</td></tr>
+                <tr><td>405</td><td>Programming Fundamentals</td><td>3 + 1</td></tr>
+                <tr><td>406</td><td>Functional English</td><td>3 + 0</td></tr>
+                <tr><td>407</td><td>Applied Physics</td><td>3 + 0</td></tr>
+                <tr><td>519</td><td>Pakistan Studies</td><td>2 + 0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h5 class="semester-title">2nd Semester</h5>
+            <table class="coursework-table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr. Hr</th></tr></thead>
+              <tbody>
+                <tr><td>361</td><td>Applied calculus</td><td>3 + 0</td></tr>
+                <tr><td>299</td><td>Digital Logic Design</td><td>2 + 1</td></tr>
+                <tr><td>515</td><td>Object Oriented Programming</td><td>3 + 1</td></tr>
+                <tr><td>411</td><td>Communication Skills</td><td>3 + 0</td></tr>
+                <tr><td>412</td><td>Islamic Studies/Ethics</td><td>2 + 0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h4 class="year-title">2nd Year</h4>
+        <div class="coursework-grid">
+          <div>
+            <h5 class="semester-title">1st Semester</h5>
+            <table class="coursework-table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr. Hr</th></tr></thead>
+              <tbody>
+                <tr><td>413</td><td>Computer Organization & Assembly Language</td><td>3 + 1</td></tr>
+                <tr><td>414</td><td>Data Structures & Algorithms</td><td>3 + 1</td></tr>
+                <tr><td>518</td><td>Linear Algebra and Analytical Geometry</td><td>3 + 0</td></tr>
+                <tr><td>416</td><td>Discrete Mathematics</td><td>3 + 0</td></tr>
+                <tr><td>417</td><td>Financial Accounting and Management</td><td>3 + 0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h5 class="semester-title">2nd Semester</h5>
+            <table class="coursework-table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr. Hr</th></tr></thead>
+              <tbody>
+                <tr><td>418</td><td>Design & Analysis of Algorithms</td><td>3 + 0</td></tr>
+                <tr><td>419</td><td>Database Systems</td><td>3 + 1</td></tr>
+                <tr><td>420</td><td>E-commerce</td><td>3 + 0</td></tr>
+                <tr><td>421</td><td>Visual Programming</td><td>3 + 1</td></tr>
+                <tr><td>422</td><td>Statistics & Probability</td><td>3 + 0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h4 class="year-title">3rd Year</h4>
+        <div class="coursework-grid">
+          <div>
+            <h5 class="semester-title">1st Semester</h5>
+            <table class="coursework-table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr. Hr</th></tr></thead>
+              <tbody>
+                <tr><td>423</td><td>Theory of Automata</td><td>3 + 0</td></tr>
+                <tr><td>424</td><td>Theory of Programming Languages</td><td>3 + 0</td></tr>
+                <tr><td>425</td><td>Operating Systems</td><td>3 + 1</td></tr>
+                <tr><td>426</td><td>Software Engineering</td><td>3 + 0</td></tr>
+                <tr><td>431</td><td>Web Engineering</td><td>2 + 1</td></tr>
+                <tr><td>MTH-424</td><td>Professional Practices</td><td>2 + 0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h5 class="semester-title">2nd Semester</h5>
+            <table class="coursework-table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr. Hr</th></tr></thead>
+              <tbody>
+                <tr><td>427</td><td>Compiler Construction</td><td>3 + 0</td></tr>
+                <tr><td>428</td><td>Computer Networks</td><td>3 + 1</td></tr>
+                <tr><td>429</td><td>Numerical Analysis and Computer Applications</td><td>3 + 0</td></tr>
+                <tr><td>430</td><td>Artificial Intelligence</td><td>3 + 1</td></tr>
+                <tr><td>432</td><td>Technical & Business Writing</td><td>3 + 0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h4 class="year-title">4th Year</h4>
+        <div class="coursework-grid">
+          <div>
+            <h5 class="semester-title">1st Semester</h5>
+            <table class="coursework-table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr. Hr</th></tr></thead>
+              <tbody>
+                <tr><td>433</td><td>Graph Theory</td><td>3 + 0</td></tr>
+                <tr><td>434</td><td>Information Security</td><td>3 + 0</td></tr>
+                <tr><td>528</td><td>Entrepreneurship and Leadership</td><td>3 + 0</td></tr>
+                <tr><td>436</td><td>Parallel & Distributed Computing</td><td>2 + 1</td></tr>
+                <tr><td>437</td><td>Mobile Application Development</td><td>3 + 1</td></tr>
+                <tr><td>54</td><td>Final Year Project-I (FYP-I)</td><td>0 + 3</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h5 class="semester-title">2nd Semester</h5>
+            <table class="coursework-table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr. Hr</th></tr></thead>
+              <tbody>
+                <tr><td>438</td><td>Cyber Security</td><td>3 + 0</td></tr>
+                <tr><td>439</td><td>Big Data Analytics</td><td>3 + 1</td></tr>
+                <tr><td>440</td><td>Human Computer Interaction</td><td>3 + 0</td></tr>
+                <tr><td>55</td><td>Final Year Project-II (FYP-II)</td><td>0 + 3</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="tab-pane">
+      <div class="section-label">// 06 — Community</div>
+      <h2 class="section-title">Leadership &amp; <span>Activities</span></h2>
+      <div class="fade-in">
+        <div class="lead-card">
+          <div class="lead-icon">🏆</div>
+          <div>
+            <div class="lead-title">Microsoft Learn Student Ambassador</div>
+            <div class="lead-org">Microsoft, USA — Gold Status · 2024 – 2026</div>
+            <p class="lead-desc">
+              Achieved Gold status among Microsoft Learn Student Ambassadors. Delivered AI and cloud-focused
+              learning sessions covering Azure AI, machine learning fundamentals, and responsible AI.
+              Mentored students on real-world AI projects from ideation through deployment using Microsoft platforms.
+            </p>
+            <div class="lead-perks">
+              <span class="perk">Azure $150/mo Credits</span>
+              <span class="perk">Visual Studio Enterprise</span>
+              <span class="perk">Microsoft 365</span>
+              <span class="perk">Gold Status</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards" class="tab-pane">
+      <div class="section-label">// 07 — Recognition</div>
+      <h2 class="section-title">Awards &amp; <span>Grants</span></h2>
+      <div class="awards-list fade-in">
+        <div class="award-item">
+          <div class="award-dot"></div>
+          <div class="award-text"><strong>Azure Cloud Credits</strong> — $150/month from Microsoft for AI and cloud
+            project development via MLSA Gold</div>
+        </div>
+        <div class="award-item">
+          <div class="award-dot"></div>
+          <div class="award-text"><strong>Visual Studio Enterprise</strong> — Full professional development license
+            awarded through Microsoft MLSA program</div>
+        </div>
+        <div class="award-item">
+          <div class="award-dot"></div>
+          <div class="award-text"><strong>Microsoft 365 License</strong> — Complete suite access including advanced
+            productivity and collaboration tools</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="tab-pane">
+      <div class="contact-inner">
+        <div class="section-label" style="text-align:center;">// 08 — Let's Talk</div>
+        <h2 class="section-title" style="text-align:center;">Get In <span>Touch</span></h2>
+        <p style="color:var(--muted);font-style:italic;margin-bottom:1rem;">
+          Open to research collaborations, internships, and interesting projects.
+        </p>
+        <a href="mailto:abdullah.malokhani@email.com" class="contact-email">abdullah.malokhani@email.com</a>
+        <div class="social-links">
+          <a href="https://github.com/abdullahkhan-cs" class="btn btn-ghost">GitHub</a>
+          <a href="https://linkedin.com/in/abdullah-malokani" class="btn btn-ghost">LinkedIn</a>
+          <a href="https://huggingface.co/yourusername" class="btn btn-ghost">HuggingFace</a>
+          <a href="YOUR_CV_LINK" class="btn btn-primary">Download CV</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -452,4 +592,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>

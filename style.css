@@ -655,12 +655,63 @@
       transform: translateY(0);
     }
 
+    /* ── COURSEWORK ── */
+    .coursework-section { margin-top: 2rem; }
+    .coursework-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .year-title {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .semester-title {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .coursework-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .coursework-table th, .coursework-table td {
+      padding: 0.8rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .coursework-table th {
+      background: var(--surface2);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--accent2);
+    }
+    .coursework-table td {
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+    .coursework-table tbody tr:hover {
+      background: var(--surface2);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.2rem; }
       #hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .coursework-grid { grid-template-columns: 1fr; gap: 1.5rem; }
       .cert-card { flex-direction: column; }
       .cert-meta { text-align: left; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
