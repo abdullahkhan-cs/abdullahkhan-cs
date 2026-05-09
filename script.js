@@ -17,10 +17,27 @@ observeElements();
 // Tab switching logic
 const tabLinks = document.querySelectorAll('.tab-link');
 const tabPanes = document.querySelectorAll('.tab-pane');
+const menuToggle = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navList.classList.toggle('active');
+  });
+}
+
 
 tabLinks.forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
+
+    // Close mobile menu if open
+    if (navList && navList.classList.contains('active')) {
+      menuToggle.classList.remove('active');
+      navList.classList.remove('active');
+    }
+
     
     // Get target tab id
     const targetId = this.getAttribute('data-tab');

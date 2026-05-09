@@ -63,6 +63,27 @@
       justify-content: center;
     }
 
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1001;
+    }
+
+    .menu-toggle .bar {
+      height: 3px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
     .nav-links {
       display: flex;
       flex-wrap: wrap;
@@ -790,8 +811,36 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { gap: 1.2rem; }
+      .page-header { padding: 1rem 1.5rem; }
+      .header-container { display: flex; justify-content: flex-end; align-items: center; }
+      
+      .menu-toggle { display: flex; }
+      
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg, var(--accent2) 0%, var(--accent) 100%);
+        padding: 1.5rem;
+        gap: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .tab-link {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+      }
+
+      nav { padding: 0; }
       #hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .coursework-grid { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -799,4 +848,9 @@
       .cert-meta { text-align: left; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
       #contact { padding: 4rem 1.5rem; }
+
+      /* Hamburger Transform */
+      .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+      .menu-toggle.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+      .menu-toggle.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
     }
