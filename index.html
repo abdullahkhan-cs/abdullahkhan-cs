@@ -25,11 +25,10 @@
         <ul class="nav-links" id="nav-list">
           <li><a href="#welcome" class="tab-link active" data-tab="welcome">Welcome</a></li>
           <li><a href="#about" class="tab-link" data-tab="about">About</a></li>
-          <li><a href="#projects" class="tab-link" data-tab="projects">Projects</a></li>
+          <li><a href="#projects" class="tab-link" data-tab="projects">Projects & Research</a></li>
           <li><a href="#skills" class="tab-link" data-tab="skills">Skills</a></li>
-          <li><a href="#certifications" class="tab-link" data-tab="certifications">Certs</a></li>
-          <li><a href="#leadership" class="tab-link" data-tab="leadership">Leadership</a></li>
-          <li><a href="#awards" class="tab-link" data-tab="awards">Awards</a></li>
+          <li><a href="#certifications" class="tab-link" data-tab="certifications">Certifications</a></li>
+          <li><a href="#leadership" class="tab-link" data-tab="leadership">Leadership & Activities</a></li>
           <li><a href="#contact" class="tab-link" data-tab="contact">Contact</a></li>
         </ul>
       </nav>
@@ -147,17 +146,6 @@
               </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2024</div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">National Freelance Training Program (NFTP)</h4>
-              <span class="timeline-org">Punjab IT Board (PITB) — Quaid-e-Awam University</span>
-              <div class="timeline-desc">
-                Trained in professional freelancing skills and project delivery under the Punjab Information Technology
-                Board.
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -247,14 +235,14 @@
           <div class="project-entry">
             <h4 class="project-entry-title">1. PlantGuardNet</h4>
             <div class="project-links-row">
-              <a href="https://github.com/abdullahkhan-cs/PlantGuardNet">GitHub</a>
+              <a href="https://github.com/abdullahkhan-cs/PlantGaurdNet">GitHub</a>
               <a href="#">Demo</a>
               <a href="#">Report</a>
               <a href="#">Slides</a>
             </div>
             <p class="project-entry-desc">
               MobileNetV3-based CNN with custom CBAM attention for 38-class plant disease detection.
-              94.3% accuracy at 12ms on Raspberry Pi 4. Deployed as Flutter app used by 3 NGOs in Punjab.
+              94.3% accuracy at 12ms on Raspberry Pi 4. Deployed as Flask app.
             </p>
           </div>
 
@@ -310,22 +298,47 @@
       <div class="academic-section fade-in">
         <h3 class="academic-heading">E- CONFERENCE AND WORKSHOP ATTENDED:</h3>
         <div class="project-list">
-          <div class="project-entry">
-            <h4 class="project-entry-title">1. National Conference on Computing Sciences and Emerging Trends (CSET' 25)
-            </h4>
-            <div class="project-entry-meta">Department of Computer Science — 2025</div>
-            <p class="project-entry-desc">
-              Participated in and supported the organization of a national-level CSET conference hosted at the
-              Quaid-e-Awam University of Engineering Science and Technology.
-            </p>
+
+          <div class="lead-card fade-in">
+            <div class="lead-icon">🌐</div>
+            <div>
+              <div class="lead-title">International Conference of Computing Sciences and Emerging Trends</div>
+              <div class="lead-org">Department of Computer Science, QUEST — 2026</div>
+              <p class="lead-desc">
+                Participated in and supported the organization of the international conference hosted at the
+                Quaid-e-Awam University of Engineering Science and Technology.
+              </p>
+              <div class="lead-perks">
+                <span class="perk">Global Collaboration</span>
+                <span class="perk">Event Management</span>
+                <span class="perk">Tech Coordination</span>
+              </div>
+              <div class="lead-cert">
+                <img src="certifications/international_conference.jpeg" alt="International Conference Certificate"
+                  class="cert-thumbnail" onclick="openModal(this.src)">
+              </div>
+            </div>
           </div>
-          <div class="project-entry">
-            <h4 class="project-entry-title">2. International Conference of Computing Sciences and Emerging Trends</h4>
-            <div class="project-entry-meta">Department of Computer Science — 2025</div>
-            <p class="project-entry-desc">
-              Participated in and supported the organization of the international conference hosted at the
-              Quaid-e-Awam University of Engineering Science and Technology.
-            </p>
+
+          <div class="lead-card fade-in" style="margin-top: 1rem;">
+            <div class="lead-icon">🏛️</div>
+            <div>
+              <div class="lead-title">National Conference on Computing Sciences and Emerging Trends (CSET' 25)</div>
+              <div class="lead-org">Department of Computer Science, QUEST — 2025</div>
+              <p class="lead-desc">
+                Participated in and supported the organization of a national-level CSET conference hosted at the
+                Quaid-e-Awam University of Engineering Science and Technology.
+              </p>
+              <div class="lead-perks">
+                <span class="perk">Conference Organizer</span>
+                <span class="perk">Tech Support</span>
+                <span class="perk">Networking</span>
+              </div>
+              <div class="lead-cert">
+                <img src="certifications/csetConference.jpeg" alt="CSET' 25 Certificate" class="cert-thumbnail"
+                  onclick="openModal(this.src)">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -519,7 +532,12 @@
         <div class="lead-card">
           <div class="lead-icon">🏆</div>
           <div>
-            <div class="lead-title">Microsoft Learn Student Ambassador</div>
+            <div class="lead-title" style="display: flex; align-items: center; gap: 1rem;">
+              Microsoft Student Ambassador
+              <a href="https://mvp.microsoft.com/en-US/studentambassadors/profile/cce452b6-52a6-48fd-bd5e-0ca27a0664b8"
+                target="_blank" class="project-link"
+                style="font-size: 0.7rem; font-weight: normal; text-transform: uppercase;">Profile ↗</a>
+            </div>
             <div class="lead-org">Microsoft, USA — Gold Status · 2024 – 2026</div>
             <p class="lead-desc">
               Achieved Gold status among Microsoft Learn Student Ambassadors. Delivered AI and cloud-focused
@@ -568,17 +586,44 @@
       </div>
       <br>
       <div class="lead-card fade-in">
+        <div class="lead-icon">🎓</div>
+        <div>
+          <div class="lead-title">National Freelance Training Program (NFTP)</div>
+          <div class="lead-org">Punjab IT Board (PITB) — Quaid-e-Awam University · 2024</div>
+          <p class="lead-desc">
+            Trained in professional freelancing skills and project delivery under the Punjab Information Technology
+            Board.
+            Gained hands-on experience in market research, proposal writing, and client management.
+          </p>
+          <div class="lead-perks">
+            <span class="perk">Freelancing</span>
+            <span class="perk">Digital Marketing</span>
+            <span class="perk">Project Management</span>
+          </div>
+          <div class="lead-cert">
+            <img src="certifications/nftp_training.jpg" alt="NFTP Certificate" class="cert-thumbnail"
+              onclick="openModal(this.src)">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="lead-card fade-in">
         <div class="lead-icon">💻</div>
         <div>
           <div class="lead-title">Web Exhibition</div>
-          <div class="lead-org">Web Developer · Quaid-e-Awam University of Engineering Science and Technology — 15 Jan
-            2026</div>
+          <div class="lead-org">Web Developer · QUEST Nawabshah — 15 Jan 2026</div>
           <p class="lead-desc">
             Participated in the Web Exhibition organized by the Department of Computer Science at Quaid-e-Awam
             University of Engineering Science and Technology.
           </p>
-          <div style="margin-top: 1rem;">
-            <a href="#" class="project-link">View Activity</a>
+          <div class="lead-perks">
+            <span class="perk">Web Development</span>
+            <span class="perk">UI/UX Design</span>
+            <span class="perk">Project Presentation</span>
+          </div>
+          <div class="lead-cert">
+            <img src="certifications/web_exhibition.jpg" alt="Web Exhibition Certificate" class="cert-thumbnail"
+              onclick="openModal(this.src)">
           </div>
         </div>
       </div>
