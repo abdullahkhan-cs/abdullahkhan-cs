@@ -29,6 +29,7 @@
           <li><a href="#skills" class="tab-link" data-tab="skills">Skills</a></li>
           <li><a href="#certifications" class="tab-link" data-tab="certifications">Certifications</a></li>
           <li><a href="#leadership" class="tab-link" data-tab="leadership">Leadership & Activities</a></li>
+          <li><a href="#achievements" class="tab-link" data-tab="achievements">Achievements</a></li>
           <li><a href="#contact" class="tab-link" data-tab="contact">Contact</a></li>
         </ul>
       </nav>
@@ -119,8 +120,8 @@
             <div class="stat-label">MLSA Status</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num">$150</div>
-            <div class="stat-label">Azure Credits/mo</div>
+            <div class="stat-num">2</div>
+            <div class="stat-label">Publications</div>
           </div>
         </div>
       </div>
@@ -226,8 +227,30 @@
       <!-- PUBLICATIONS -->
       <div class="academic-section fade-in">
         <h3 class="academic-heading">PUBLICATIONS</h3>
-        <p class="project-entry-desc" style="font-style: italic;">No publications yet. Research manuscripts currently in
-          preparation.</p>
+        <div class="project-list">
+          <div class="project-entry">
+            <h4 class="project-entry-title">1. [Publication Title Here]</h4>
+            <div class="project-links-row">
+              <a href="#">Journal/Conference</a>
+              <a href="#">PDF</a>
+              <a href="#">Code</a>
+            </div>
+            <p class="project-entry-desc">
+              Description of your first publication goes here. Mention the core contribution and results.
+            </p>
+          </div>
+          <div class="project-entry">
+            <h4 class="project-entry-title">2. [Publication Title Here]</h4>
+            <div class="project-links-row">
+              <a href="#">Journal/Conference</a>
+              <a href="#">PDF</a>
+              <a href="#">Code</a>
+            </div>
+            <p class="project-entry-desc">
+              Description of your second publication goes here. Mention the core contribution and results.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- PROJECTS -->
@@ -532,8 +555,7 @@
     <section id="leadership" class="tab-pane">
       <div class="section-label">// 05 — Community</div>
       <h2 class="section-title">Leadership &amp; <span>Activities</span></h2>
-      <div class="fade-in">
-        <div class="lead-card">
+        <div class="lead-card fade-in">
           <div class="lead-icon">🏆</div>
           <div>
             <div class="lead-title" style="display: flex; align-items: center; gap: 1rem;">
@@ -548,7 +570,8 @@
               learning sessions covering Azure AI, machine learning fundamentals, and responsible AI.
               Mentored students on real-world AI projects from ideation through deployment using Microsoft platforms.
             </p>
-            <ul class="lead-desc" style="list-style: disc; margin-left: 1.5rem; margin-top: 0.8rem;">
+            <p class="lead-desc" style="font-weight: 600; color: var(--text); margin-top: 1.2rem; margin-bottom: 0.5rem;">Benefits:</p>
+            <ul class="lead-desc" style="list-style: disc; margin-left: 1.5rem; margin-top: 0;">
               <li><strong>Azure Cloud Credits:</strong> $150/month for AI and cloud project development.</li>
               <li><strong>Visual Studio Enterprise:</strong> Full professional development license.</li>
               <li><strong>Microsoft 365 License:</strong> Complete suite access including advanced productivity and
@@ -567,8 +590,7 @@
             </div>
           </div>
         </div>
-      </div>
-      <br>
+
       <div class="lead-card">
         <div class="lead-icon">🏆</div>
         <div>
@@ -580,15 +602,16 @@
           </p>
           <div class="lead-perks">
             <span class="perk">Certificate of Graduation</span>
-            <span class="perk">Refrence Letter</span>
+            <span class="perk">Reference Letter</span>
           </div>
-          <div class="lead-cert">
+          <div class="lead-cert" style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <img src="certifications/aspire_leader.jpg" alt="Aspire Leaders Program Certificate" class="cert-thumbnail"
+              onclick="openModal(this.src)">
+            <img src="certifications/aspireLetter.jpg" alt="Aspire Leaders Reference Letter" class="cert-thumbnail"
               onclick="openModal(this.src)">
           </div>
         </div>
       </div>
-      <br>
       <div class="lead-card fade-in">
         <div class="lead-icon">🎓</div>
         <div>
@@ -610,7 +633,6 @@
           </div>
         </div>
       </div>
-      <br>
       <div class="lead-card fade-in">
         <div class="lead-icon">💻</div>
         <div>
@@ -631,7 +653,6 @@
           </div>
         </div>
       </div>
-      <br>
       <div class="lead-card fade-in">
         <div class="lead-icon">☁️</div>
         <div>
@@ -647,7 +668,6 @@
           </div>
         </div>
       </div>
-      <br>
       <div class="lead-card fade-in">
         <div class="lead-icon">🐍</div>
         <div>
@@ -665,10 +685,10 @@
       </div>
     </section>
 
-    <!-- AWARDS -->
-    <section id="awards" class="tab-pane">
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="tab-pane">
       <div class="section-label">// 06 — Recognition</div>
-      <h2 class="section-title">Awards &amp; <span>Grants</span></h2>
+      <h2 class="section-title">Academic &amp; <span>Achievements</span></h2>
       <div class="awards-list fade-in">
 
         <div class="award-item">
@@ -676,6 +696,17 @@
           <div class="award-text"><strong>Prime Minister's Laptop Scheme</strong> — Obtained laptop through
             competitive merit-based program</div>
         </div>
+
+        <div class="award-item">
+          <div class="award-dot"></div>
+          <div class="award-text"><strong>65% Semester Tuition Fee Waiver</strong> — Awarded for academic excellence and high merit standing</div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-dot"></div>
+          <div class="award-text"><strong>Top 5 Class Rank</strong> — Consistently ranked among the top 5 students in each semester across the cohort</div>
+        </div>
+
       </div>
     </section>
 
