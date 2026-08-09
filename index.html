@@ -334,6 +334,67 @@
       padding: 30px 0 10px;
     }
 
+    /* Certifications full-size section */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 8px;
+    }
+
+    .cert-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(31, 78, 121, 0.06);
+      transition: box-shadow .2s, transform .2s, border-color .2s;
+      cursor: zoom-in;
+    }
+
+    .cert-card:hover {
+      box-shadow: 0 8px 32px rgba(31, 78, 121, 0.14);
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .cert-card-header {
+      padding: 14px 18px 10px;
+      border-bottom: 1px solid var(--line);
+      background: var(--accent-soft);
+    }
+
+    .cert-card-title {
+      font-family: var(--serif);
+      font-size: 0.98rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 2px;
+      line-height: 1.35;
+    }
+
+    .cert-card-issuer {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .cert-card img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+      background: #f7f8fa;
+      max-height: 380px;
+    }
+
+    @media (max-width: 700px) {
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* Certificate proof thumbnails */
     .proof-row {
       display: flex;
@@ -503,6 +564,8 @@
         <a href="#skills">Skills</a>
         <a href="#leadership">Leadership</a>
         <a href="#engagement">Engagement</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#badges">Badges</a>
       </nav>
     </aside>
 
@@ -555,23 +618,6 @@
       <section id="experience">
         <h2 class="section-title">Research Experience <span class="tag">Timeline</span></h2>
 
-        <div class="timeline-item">
-          <div class="when">June 2026 — Present</div>
-          <div>
-            <h3>Undergraduate Research Assistant</h3>
-            <div class="org">Computer Vision Lab, QUEST · Nawabshah, Pakistan</div>
-            <ul>
-              <li>Engineered deep learning pipelines for 3D object reconstruction, focusing on 3D monocular vision from
-                limited 2D views.</li>
-              <li>Developed custom attention modules for long-range spatial dependencies, improving structural fidelity
-                in multi-view synthesis.</li>
-              <li>Used PyTorch to design, train, and validate networks, applying augmentation and loss formulations to
-                mitigate occlusion.</li>
-              <li>Supervised by Dr. Ali Asghar Chandio; contributing to the lab's codebase and preparing findings for
-                publication.</li>
-            </ul>
-          </div>
-        </div>
 
         <div class="timeline-item">
           <div class="when">June 2026</div>
@@ -663,38 +709,8 @@
               <li>Led technical workshops for 200+ students on Microsoft developer tools and cloud technologies.</li>
               <li>Mentored students in building and deploying end-to-end AI applications using Azure credits.</li>
             </ul>
-            <a href="https://mvp.microsoft.com/en-US/studentambassadors/profile/cce452b6-52a6-48fd-bd5e-0ca27a0664b8"
-              target="_blank"
-              style="display:inline-block; margin-bottom:10px; font-family:var(--mono); font-size:0.72rem; color:var(--accent); border:1px solid var(--line); border-radius:6px; padding:5px 10px; background:var(--accent-soft);">
-              Visit Profile
-            </a>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/microsoft_student_ambassador.jpg"
-                  alt="Microsoft Student Ambassador certificate" onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">Certificate</span>
-              </div>
-              <div class="proof-item">
-                <img class="proof" src="certifications/ambassador_badge.png" alt="Microsoft Student Ambassador badge"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label badge">Badge</span>
-              </div>
-              <div class="proof-item">
-                <img class="proof" src="certifications/goldMlsa.jpg" alt="Aspire Leaders acceptance letter"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">certificate</span>
-              </div>
-              <div class="proof-item">
-                <img class="proof" src="certifications/betaMlsa.jpg" alt="Aspire Leaders acceptance letter"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">certificate</span>
-              </div>
-              <div class="proof-item">
-                <img class="proof" src="certifications/betaAmbassador.png" alt="Aspire Leaders acceptance letter"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label badge">badge</span>
-              </div>
-            </div>
+
+
           </div>
         </div>
         <div class="timeline-item">
@@ -706,23 +722,7 @@
               <li>Coursework: Leadership, Critical Thinking, Communication, Social Impact &amp; Technology
                 Entrepreneurship.</li>
             </ul>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/aspire_leader.jpg" alt="Aspire Leaders Program certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">Certificate</span>
-              </div>
-              <div class="proof-item">
-                <img class="proof" src="certifications/alp_badge.jpg" alt="CSET'25 certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label badge">Badge</span>
-              </div>
-              <div class="proof-item">
-                <img class="proof" src="certifications/aspireLetter.jpg" alt="Aspire Leaders acceptance letter"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">Letter</span>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -735,13 +735,7 @@
               <li>Led a 5-member executive committee overseeing technical planning and execution.</li>
               <li>Organized 5+ events including bootcamps, workshops and guest lectures, engaging 300+ students.</li>
             </ul>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/soc_certificate.png" alt="Society of Coders certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">Certificate</span>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -779,13 +773,7 @@
           <div>
             <h3>USAII Global Hackathon</h3>
             <div class="org">USAII · Participant &amp; Reached Level - 1 </div>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/usaii_badge.png" alt="ICSET'26 certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label badge">Badge</span>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -794,13 +782,7 @@
           <div>
             <h3>AI Skill Fest 2026</h3>
             <div class="org">Microsoft · Participant &amp; Recipient of MTC Voucher</div>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/ai-skills-fest-2026.png" alt="ICSET'26 certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label badge">Badge</span>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -809,13 +791,7 @@
           <div>
             <h3>International Conference on Computing Sciences (ICSET'26)</h3>
             <div class="org">Participant</div>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/international_conference.jpeg" alt="ICSET'26 certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">Certificate</span>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -824,13 +800,7 @@
           <div>
             <h3>National Conference on Computing Sciences (CSET'25)</h3>
             <div class="org">Participant</div>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/csetConference.jpeg" alt="CSET'25 certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">Certificate</span>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -847,13 +817,7 @@
           <div>
             <h3>Python Bootcamp</h3>
             <div class="org">Speaker &amp; Organizer</div>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/pythonBootcamp.jpeg" alt="Python Bootcamp certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label badge">Poster</span>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -862,13 +826,7 @@
           <div>
             <h3>Cloud Skills Challenge</h3>
             <div class="org">Event Host &amp; Organizer</div>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/cloudSkills.png" alt="Cloud Skills Challenge certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label badge">Badge</span>
-              </div>
-            </div>
+
           </div>
         </div>
         <div class="timeline-item">
@@ -876,14 +834,183 @@
           <div>
             <h3>National Freelance Training Program (NFTP)</h3>
             <div class="org">PITB · Participant</div>
-            <div class="proof-row">
-              <div class="proof-item">
-                <img class="proof" src="certifications/nftp_training.jpg" alt="NFTP, PITB certificate"
-                  onclick="openLightbox(this.src)">
-                <span class="proof-label certificate">Certificate</span>
-              </div>
-            </div>
+
           </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS SECTION -->
+      <section id="certifications">
+        <h2 class="section-title">Certifications <span class="tag">Credentials</span></h2>
+
+        <div class="cert-grid">
+
+          <div class="cert-card" onclick="openLightbox('certifications/microsoft_student_ambassador.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Senior Microsoft Student Ambassador</div>
+              <div class="cert-card-issuer">Microsoft</div>
+            </div>
+            <img src="certifications/microsoft_student_ambassador.jpg" alt="Microsoft Student Ambassador Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/goldMlsa.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Gold MLSA Recognition</div>
+              <div class="cert-card-issuer">Microsoft</div>
+            </div>
+            <img src="certifications/goldMlsa.jpg" alt="Gold MLSA Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/betaMlsa.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Beta MLSA Certificate</div>
+              <div class="cert-card-issuer">Microsoft</div>
+            </div>
+            <img src="certifications/betaMlsa.jpg" alt="Beta MLSA Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/aspire_leader.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Aspire Leaders Program</div>
+              <div class="cert-card-issuer">Aspire Institute · Harvard University</div>
+            </div>
+            <img src="certifications/aspire_leader.jpg" alt="Aspire Leaders Program Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/aspireLetter.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Aspire Leaders Reference Letter</div>
+              <div class="cert-card-issuer">Aspire Institute · Harvard University</div>
+            </div>
+            <img src="certifications/aspireLetter.jpg" alt="Aspire Leaders Reference Letter">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/soc_certificate.png')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Technical Team Head — Society of Coders</div>
+              <div class="cert-card-issuer">Society of Coders · QUEST</div>
+            </div>
+            <img src="certifications/soc_certificate.png" alt="Society of Coders Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/international_conference.jpeg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">International Conference on Computing Sciences (ICSET'26)</div>
+              <div class="cert-card-issuer">Participant · 2026</div>
+            </div>
+            <img src="certifications/international_conference.jpeg" alt="ICSET'26 Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/csetConference.jpeg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">National Conference on Computing Sciences (CSET'25)</div>
+              <div class="cert-card-issuer">Participant · 2025</div>
+            </div>
+            <img src="certifications/csetConference.jpeg" alt="CSET'25 Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/nftp_training.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">National Freelance Training Program (NFTP)</div>
+              <div class="cert-card-issuer">PITB · 2024</div>
+            </div>
+            <img src="certifications/nftp_training.jpg" alt="NFTP PITB Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/azure_ai.png')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Azure AI Cloud Developer Associate</div>
+              <div class="cert-card-issuer">Microsoft Azure</div>
+            </div>
+            <img src="certifications/azure_ai.png" alt="Azure AI Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/programming.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Programming Certificate</div>
+              <div class="cert-card-issuer">Certificate of Completion</div>
+            </div>
+            <img src="certifications/programming.jpg" alt="Programming Certificate">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/python.jpeg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Python Programming Certificate</div>
+              <div class="cert-card-issuer">Certificate of Completion</div>
+            </div>
+            <img src="certifications/python.jpeg" alt="Python Certificate">
+          </div>
+
+
+        </div>
+      </section>
+
+      <!-- BADGES SECTION -->
+      <section id="badges">
+        <h2 class="section-title">Badges <span class="tag">Digital Credentials</span></h2>
+        <p style="font-size:0.85rem; color:var(--muted); margin-top:-8px; margin-bottom:20px;">
+          All badges can be independently verified on
+          <a href="https://www.credly.com/users/abdullah-khan.a323429a/badges/credly" target="_blank">my Credly profile →</a>
+        </p>
+
+        <div class="cert-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+          <div class="cert-card" onclick="openLightbox('certifications/ambassador_badge.png')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Senior Microsoft Student Ambassador</div>
+              <div class="cert-card-issuer">Microsoft</div>
+            </div>
+            <img src="certifications/ambassador_badge.png" alt="Microsoft Student Ambassador Badge" style="object-fit:contain; background:#f0f4f8;">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/goldAmbassador.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Gold Microsoft Student Ambassador</div>
+              <div class="cert-card-issuer">Microsoft</div>
+            </div>
+            <img src="certifications/goldAmbassador.jpg" alt="Gold Ambassador Badge" style="object-fit:contain; background:#f0f4f8;">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/betaAmbassador.png')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Beta Microsoft Student Ambassador</div>
+              <div class="cert-card-issuer">Microsoft</div>
+            </div>
+            <img src="certifications/betaAmbassador.png" alt="Beta Ambassador Badge" style="object-fit:contain; background:#f0f4f8;">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/alp_badge.jpg')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Aspire Leaders Program</div>
+              <div class="cert-card-issuer">Aspire Institute · Harvard University</div>
+            </div>
+            <img src="certifications/alp_badge.jpg" alt="Aspire Leaders Program Badge" style="object-fit:contain; background:#f0f4f8;">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/usaii_badge.png')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">USAII Global Hackathon — Level 1</div>
+              <div class="cert-card-issuer">USAII · 2026</div>
+            </div>
+            <img src="certifications/usaii_badge.png" alt="USAII Hackathon Badge" style="object-fit:contain; background:#f0f4f8;">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/ai-skills-fest-2026.png')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">AI Skill Fest 2026</div>
+              <div class="cert-card-issuer">Microsoft · 2026</div>
+            </div>
+            <img src="certifications/ai-skills-fest-2026.png" alt="AI Skill Fest 2026 Badge" style="object-fit:contain; background:#f0f4f8;">
+          </div>
+
+          <div class="cert-card" onclick="openLightbox('certifications/cloudSkills.png')">
+            <div class="cert-card-header">
+              <div class="cert-card-title">Cloud Skills Challenge</div>
+              <div class="cert-card-issuer">Microsoft · 2024</div>
+            </div>
+            <img src="certifications/cloudSkills.png" alt="Cloud Skills Challenge Badge" style="object-fit:contain; background:#f0f4f8;">
+          </div>
+
         </div>
       </section>
 
