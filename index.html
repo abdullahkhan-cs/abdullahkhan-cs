@@ -574,26 +574,23 @@
 
       <section id="about">
         <h2 class="section-title">About Me <span class="tag">Profile</span></h2>
-        <p class="lede">I am a final-year Computer Science student at <a href="#" onclick="return false;">Quaid-e-Awam
-            University of Engineering, Science and Technology (QUEST)</a>, Nawabshah, Pakistan, currently working on final year project at the Computer Vision Lab under the supervision of <b>Dr. Ali Asghar
-            Chandio</b>, focusing on 3D monocular vision and multi-view 3D object reconstruction.</p>
-        <p>Previously, I completed a research-oriented training program at the Applied AI Lab, WorldQuant University
-          (WQU), working on Edge AI pipelines, generative models for medical imaging, and model deployment for
-          resource-constrained devices. I also completed internships at Sindh Bank Limited (IT Division) and Mashreq
-          Bank as a remote software developer, and I am a Senior Microsoft Student Ambassador and Aspire Leaders Program
-          (Harvard / Aspire Institute) alum.</p>
-        <p>My academic work centers on deep learning, computer vision with a particular interest in medical imaging
-          applications. I am the co-author of a peer-reviewed submission on
-          explainable medical image segmentation, currently under review.</p>
+        <p class="lede">I am a final-year Computer Science undergraduate at <a href="#" onclick="return false;">Quaid-e-Awam
+            University of Engineering, Science and Technology (QUEST)</a>, Nawabshah, Pakistan, and an AI researcher
+          focused on trustworthy medical imaging.</p>
+        <p>I am the second author of a manuscript under review on parameter-efficient fine-tuning of MedSAM for
+          explainable skin lesion segmentation. My ongoing final year project studies the cross-dataset generalization
+          and explainability of pathology foundation models for breast histopathology classification. My work
+          combines LoRA/PEFT, Grad-CAM explainability, calibration analysis and rigorous statistical validation.</p>
+        <p>I also completed an internship in the IT Division of Sindh Bank Limited, and I am a Microsoft Student
+          Ambassador (Gold) and an Aspire Leaders Program (Harvard / Aspire Institute) alum.</p>
       </section>
       <section id="research">
         <h2 class="section-title">Research Interests <span class="tag">Focus Areas</span></h2>
         <div class="pill-row">
-          <span class="pill">Deep Learning</span>
-          <span class="pill">Computer Vision</span>
-          <span class="pill">3D Reconstruction</span>
+          <span class="pill">Computational Pathology</span>
           <span class="pill">Medical Imaging</span>
-          <span class="pill">AI in Healthcare</span>
+          <span class="pill">Foundation Models</span>
+          <span class="pill">Explainable AI</span>
         </div>
       </section>
 
@@ -606,7 +603,7 @@
             <h3>PEFT-MedSAM: Efficient Fine-Tuning of Medical Foundation Models for Explainable Skin Lesion Segmentation
             </h3>
             <p class="meta">A. Channa, <b>A. Khan</b>, A. A. Chandio, A. Akbar, S. Memon, A. Hussain, and A. Hamza</p>
-            <p class="venue">Artificial Intelligence in Medicine · Under Review, 2026 · arXiv:2606.18707</p>
+            <p class="venue">Journal of Medical Imaging and Radiation Oncology · Under Review, 2026 · arXiv:2606.18707</p>
             <div class="btn-row">
               <a class="btn" href="https://arxiv.org/abs/2606.18707" target="_blank">Paper</a>
               <a class="btn" href="#" onclick="return false;">BibTeX</a>
@@ -618,21 +615,40 @@
       <section id="experience">
         <h2 class="section-title">Research Experience <span class="tag">Timeline</span></h2>
 
+        <div class="timeline-item">
+          <div class="when">2026 — Present</div>
+          <div>
+            <h3>Cross-Dataset Generalization and Explainability of Pathology Foundation Models for Breast
+              Histopathology Classification</h3>
+            <div class="org">Final Year Research Project (Ongoing) · QUEST, Nawabshah</div>
+            <ul>
+              <li>Built a patient-level, leakage-free BreakHis split (7,909 images, 82 patients) for benign/malignant
+                classification.</li>
+              <li>Fine-tuned a ResNet50 baseline and evaluated UNI as a frozen encoder and with LoRA on BreakHis and
+                external BACH.</li>
+              <li>Extending the protocol to Phikon and CONCH, with McNemar, paired DeLong, Holm correction and
+                bootstrap CIs.</li>
+              <li>Measuring Grad-CAM/Grad-CAM++ faithfulness (deletion/insertion) and calibration (ECE, temperature
+                scaling) under the BreakHis-to-BACH shift; building a Streamlit demo with confidence and heatmaps.</li>
+            </ul>
+          </div>
+        </div>
 
         <div class="timeline-item">
-          <div class="when">June 2026</div>
+          <div class="when">2026</div>
           <div>
-            <h3>Research-Oriented Training, Computer Vision Lab</h3>
-            <div class="org">Applied AI Lab, WorldQuant University (WQU) · Remote</div>
+            <h3>PEFT-MedSAM: Efficient Fine-Tuning of Medical Foundation Models for Explainable Skin Lesion
+              Segmentation</h3>
+            <div class="org">Second Author · Under Review</div>
             <ul>
-              <li>Selected for an intensive program covering end-to-end pipelines for building, fine-tuning, and
-                deploying CV models.</li>
-              <li>Designed Edge AI pipelines (MobileNetV3, YOLOv8) for crop disease detection (PlantGuardNet) and
-                wildlife classification.</li>
-              <li>Implemented generative frameworks via Hugging Face / PyTorch, including medical image generation for
-                brain tumor detection.</li>
-              <li>Built evaluation protocols for inference throughput and cross-platform deployment on
-                resource-constrained devices.</li>
+              <li>Trained only the MedSAM mask decoder, keeping image and prompt encoders frozen, for dermoscopic
+                lesion segmentation.</li>
+              <li>Reached Dice 0.9411 and IoU 0.8918 on ISIC 2018, above a U-Net baseline (0.8715) and zero-shot
+                MedSAM (0.8997).</li>
+              <li>Validated externally on PH2 (Dice 0.9467) with Wilcoxon signed-rank tests and bootstrap 95%
+                confidence intervals.</li>
+              <li>Evaluated Grad-CAM explanations of the CNN baseline with a pointing game (98.27% on 519 validation
+                images).</li>
             </ul>
           </div>
         </div>
@@ -642,27 +658,27 @@
         <h2 class="section-title">Selected Projects <span class="tag">Academic</span></h2>
 
         <div class="entry">
-          <div class="thumb">PlantGuardNet</div>
+          <div class="thumb">Pathology<br>Foundation Models</div>
           <div>
-            <h3>PlantGuardNet: Edge AI for Crop Disease Detection</h3>
-            <p class="meta">Academic Project</p>
+            <h3>Trustworthy Breast Histopathology Classification with Pathology Foundation Models</h3>
+            <p class="meta">Final Year Project · Ongoing</p>
             <ul style="margin:0; padding-left:18px; font-size:0.92rem; color:#323d49;">
-              <li>Edge-deployable model for crop disease classification from leaf images, 92% accuracy across
-                categories.</li>
-              <li>Applied quantization and pruning for efficient deployment; integrated Grad-CAM for explainability.
-              </li>
+              <li>Leakage-free, patient-level evaluation on BreakHis (7,909 images, 82 patients) with external
+                validation on BACH.</li>
+              <li>Compares ResNet50, frozen UNI and UNI with LoRA, extending to Phikon and CONCH.</li>
+              <li>Streamlit demo showing predictions with confidence scores and Grad-CAM heatmaps.</li>
             </ul>
           </div>
         </div>
 
         <div class="entry">
-          <div class="thumb">MultiView3D</div>
+          <div class="thumb">PEFT-MedSAM</div>
           <div>
-            <h3>MultiView3D: 3D Object Reconstruction from Multiple Views</h3>
-            <p class="meta">Computer Vision Project</p>
+            <h3>PEFT-MedSAM: Parameter-Efficient Skin Lesion Segmentation</h3>
+            <p class="meta">Research Project · Under Review</p>
             <ul style="margin:0; padding-left:18px; font-size:0.92rem; color:#323d49;">
-              <li>Multi-view 3D reconstruction pipeline using image-based geometry estimation.</li>
-              <li>Feature matching and camera pose estimation; generated textured 3D models from 2D images.</li>
+              <li>Decoder-only fine-tuning of MedSAM reaching Dice 0.9411 and IoU 0.8918 on ISIC 2018.</li>
+              <li>External validation on PH2 (Dice 0.9467) with Grad-CAM pointing-game accuracy of 98.27%.</li>
             </ul>
           </div>
         </div>
@@ -677,9 +693,9 @@
             <h3>BS Computer Science</h3>
             <div class="org">Quaid-e-Awam University of Engineering, Science and Technology · Nawabshah, Pakistan</div>
             <ul>
-              <li>Current SGPA: 3.73 / 4.0</li>
-              <li>Coursework: Programming Fundamentals, Algorithms &amp; Data Structures, Artificial Intelligence,
-                Linear Algebra, Probability &amp; Statistics, Database Systems &amp; Software Engineering.</li>
+              <li>Current CGPA: 3.29 / 4.0</li>
+              <li>Coursework: Machine Learning, Artificial Intelligence, Algorithms &amp; Data Structures, Linear
+                Algebra, Probability &amp; Statistics, Big Data Analytics.</li>
             </ul>
           </div>
         </div>
@@ -689,11 +705,12 @@
         <h2 class="section-title">Skills &amp; Competencies <span class="tag">Technical</span></h2>
         <div class="skill-grid">
           <div class="skill-row"><b>Programming:</b> Python, C/C++, JavaScript</div>
-          <div class="skill-row"><b>DL Frameworks:</b> PyTorch, TensorFlow, Keras</div>
-          <div class="skill-row"><b>Computer Vision:</b> OpenCV, Torchvision</div>
-          <div class="skill-row"><b>Tools:</b> Pandas, NumPy, Scikit-Learn</div>
-          <div class="skill-row"><b>Languages:</b> English (IELTS 7.5), Urdu (Native)</div>
-          <div class="skill-row"><b>Web/Full-stack:</b> ASP.NET Core MVC, React, PHP</div>
+          <div class="skill-row"><b>Libraries:</b> PyTorch, Hugging Face PEFT, Torchvision, OpenCV, Scikit-Learn,
+            Pandas, NumPy, Streamlit</div>
+          <div class="skill-row"><b>Methods:</b> LoRA/PEFT, Grad-CAM/Grad-CAM++, calibration (ECE, temperature
+            scaling)</div>
+          <div class="skill-row"><b>Statistics:</b> Bootstrap CIs, Wilcoxon, McNemar, DeLong, Holm correction</div>
+          <div class="skill-row"><b>Languages:</b> English (Proficient), Urdu (Native)</div>
         </div>
       </section>
 
@@ -701,18 +718,17 @@
         <h2 class="section-title">Leadership &amp; Teaching <span class="tag">Community</span></h2>
 
         <div class="timeline-item">
-          <div class="when">Apr 2024 — Present</div>
+          <div class="when">Apr 2024 — Jun 2026</div>
           <div>
-            <h3>Senior Microsoft Student Ambassador</h3>
+            <h3>Microsoft Student Ambassador (Gold)</h3>
             <div class="org">Microsoft · Remote</div>
             <ul>
               <li>Led technical workshops for 200+ students on Microsoft developer tools and cloud technologies.</li>
               <li>Mentored students in building and deploying end-to-end AI applications using Azure credits.</li>
             </ul>
-
-
           </div>
         </div>
+
         <div class="timeline-item">
           <div class="when">Jul 2025 — Oct 2025</div>
           <div>
@@ -722,7 +738,6 @@
               <li>Coursework: Leadership, Critical Thinking, Communication, Social Impact &amp; Technology
                 Entrepreneurship.</li>
             </ul>
-
           </div>
         </div>
 
@@ -732,10 +747,10 @@
             <h3>Technical Team Head</h3>
             <div class="org">Society of Coders, QUEST · Nawabshah, Pakistan</div>
             <ul>
-              <li>Led a 5-member executive committee overseeing technical planning and execution.</li>
-              <li>Organized 5+ events including bootcamps, workshops and guest lectures, engaging 300+ students.</li>
+              <li>Led a 5-member executive committee and organized 5+ technical events (bootcamps, workshops, guest
+                lectures) engaging 300 students.</li>
+              <li>Mentored student volunteers and coordinated technical teams for event execution.</li>
             </ul>
-
           </div>
         </div>
 
@@ -773,7 +788,6 @@
           <div>
             <h3>USAII Global Hackathon</h3>
             <div class="org">USAII · Participant &amp; Reached Level - 1 </div>
-
           </div>
         </div>
 
@@ -782,7 +796,6 @@
           <div>
             <h3>AI Skill Fest 2026</h3>
             <div class="org">Microsoft · Participant &amp; Recipient of MTC Voucher</div>
-
           </div>
         </div>
 
@@ -791,7 +804,6 @@
           <div>
             <h3>International Conference on Computing Sciences (ICSET'26)</h3>
             <div class="org">Participant</div>
-
           </div>
         </div>
 
@@ -800,7 +812,6 @@
           <div>
             <h3>National Conference on Computing Sciences (CSET'25)</h3>
             <div class="org">Participant</div>
-
           </div>
         </div>
 
@@ -817,7 +828,6 @@
           <div>
             <h3>Python Bootcamp</h3>
             <div class="org">Speaker &amp; Organizer</div>
-
           </div>
         </div>
 
@@ -826,15 +836,14 @@
           <div>
             <h3>Cloud Skills Challenge</h3>
             <div class="org">Event Host &amp; Organizer</div>
-
           </div>
         </div>
+
         <div class="timeline-item">
           <div class="when">2024</div>
           <div>
             <h3>National Freelance Training Program (NFTP)</h3>
             <div class="org">PITB · Participant</div>
-
           </div>
         </div>
       </section>
@@ -941,7 +950,6 @@
             <img src="certifications/python.jpeg" alt="Python Certificate">
           </div>
 
-
         </div>
       </section>
 
@@ -950,7 +958,8 @@
         <h2 class="section-title">Badges <span class="tag">Digital Credentials</span></h2>
         <p style="font-size:0.85rem; color:var(--muted); margin-top:-8px; margin-bottom:20px;">
           All badges can be independently verified on
-          <a href="https://www.credly.com/users/abdullah-khan.a323429a/badges/credly" target="_blank">my Credly profile →</a>
+          <a href="https://www.credly.com/users/abdullah-khan.a323429a/badges/credly" target="_blank">my Credly profile
+            →</a>
         </p>
 
         <div class="cert-grid" style="grid-template-columns: repeat(3, 1fr);">
@@ -960,7 +969,8 @@
               <div class="cert-card-title">Senior Microsoft Student Ambassador</div>
               <div class="cert-card-issuer">Microsoft</div>
             </div>
-            <img src="certifications/ambassador_badge.png" alt="Microsoft Student Ambassador Badge" style="object-fit:contain; background:#f0f4f8;">
+            <img src="certifications/ambassador_badge.png" alt="Microsoft Student Ambassador Badge"
+              style="object-fit:contain; background:#f0f4f8;">
           </div>
 
           <div class="cert-card" onclick="openLightbox('certifications/goldAmbassador.jpg')">
@@ -968,7 +978,8 @@
               <div class="cert-card-title">Gold Microsoft Student Ambassador</div>
               <div class="cert-card-issuer">Microsoft</div>
             </div>
-            <img src="certifications/goldAmbassador.jpg" alt="Gold Ambassador Badge" style="object-fit:contain; background:#f0f4f8;">
+            <img src="certifications/goldAmbassador.jpg" alt="Gold Ambassador Badge"
+              style="object-fit:contain; background:#f0f4f8;">
           </div>
 
           <div class="cert-card" onclick="openLightbox('certifications/betaAmbassador.png')">
@@ -976,7 +987,8 @@
               <div class="cert-card-title">Beta Microsoft Student Ambassador</div>
               <div class="cert-card-issuer">Microsoft</div>
             </div>
-            <img src="certifications/betaAmbassador.png" alt="Beta Ambassador Badge" style="object-fit:contain; background:#f0f4f8;">
+            <img src="certifications/betaAmbassador.png" alt="Beta Ambassador Badge"
+              style="object-fit:contain; background:#f0f4f8;">
           </div>
 
           <div class="cert-card" onclick="openLightbox('certifications/alp_badge.jpg')">
@@ -984,7 +996,8 @@
               <div class="cert-card-title">Aspire Leaders Program</div>
               <div class="cert-card-issuer">Aspire Institute · Harvard University</div>
             </div>
-            <img src="certifications/alp_badge.jpg" alt="Aspire Leaders Program Badge" style="object-fit:contain; background:#f0f4f8;">
+            <img src="certifications/alp_badge.jpg" alt="Aspire Leaders Program Badge"
+              style="object-fit:contain; background:#f0f4f8;">
           </div>
 
           <div class="cert-card" onclick="openLightbox('certifications/usaii_badge.png')">
@@ -992,7 +1005,8 @@
               <div class="cert-card-title">USAII Global Hackathon — Level 1</div>
               <div class="cert-card-issuer">USAII · 2026</div>
             </div>
-            <img src="certifications/usaii_badge.png" alt="USAII Hackathon Badge" style="object-fit:contain; background:#f0f4f8;">
+            <img src="certifications/usaii_badge.png" alt="USAII Hackathon Badge"
+              style="object-fit:contain; background:#f0f4f8;">
           </div>
 
           <div class="cert-card" onclick="openLightbox('certifications/ai-skills-fest-2026.png')">
@@ -1000,7 +1014,8 @@
               <div class="cert-card-title">AI Skill Fest 2026</div>
               <div class="cert-card-issuer">Microsoft · 2026</div>
             </div>
-            <img src="certifications/ai-skills-fest-2026.png" alt="AI Skill Fest 2026 Badge" style="object-fit:contain; background:#f0f4f8;">
+            <img src="certifications/ai-skills-fest-2026.png" alt="AI Skill Fest 2026 Badge"
+              style="object-fit:contain; background:#f0f4f8;">
           </div>
 
           <div class="cert-card" onclick="openLightbox('certifications/cloudSkills.png')">
@@ -1008,13 +1023,14 @@
               <div class="cert-card-title">Cloud Skills Challenge</div>
               <div class="cert-card-issuer">Microsoft · 2024</div>
             </div>
-            <img src="certifications/cloudSkills.png" alt="Cloud Skills Challenge Badge" style="object-fit:contain; background:#f0f4f8;">
+            <img src="certifications/cloudSkills.png" alt="Cloud Skills Challenge Badge"
+              style="object-fit:contain; background:#f0f4f8;">
           </div>
 
         </div>
       </section>
 
-      <footer>Built by Abdullah Khan · Updated June 2026</footer>
+      <footer>Built by Abdullah Khan · Updated October 2026</footer>
     </main>
   </div>
 
